@@ -17,7 +17,10 @@ jobs:
   build:
     # The type of runner that the job will run on
     runs-on: ubuntu-latest
-
+    env:
+      SHA_SHORT: ${{ github.sha::7 }}
+      RUNNER_NUMBER: ${{ github.run_number }}
+      VERSION_MAJOR: 0.9.
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
@@ -29,4 +32,4 @@ jobs:
 
       # Runs a set of commands using the runners shell
       - name: Run a multi-line script
-        run: echo "0.9.${GITHUB_RUN_NUMBER}-${{steps.vars.outputs.sha_short}}"
+        run: echo "${{ env.VERSION_MAJOR }}${{ env.RUNNER_NUMBER }}-${{ env.SHA_SHORT }}"
