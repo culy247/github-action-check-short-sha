@@ -21,10 +21,6 @@ jobs:
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v3
-      - uses: einaregilsson/build-number@v3
-        with:
-          token: ${{secrets.github_token}}
-          prefix: ${GITHUB_REF_NAME}
           
       - name: Run show version
         run: echo "${{ env.VERSION_MAJOR }}${{ env.RUNNER_NUMBER }}-${{ env.SHA_SHORT }}"
