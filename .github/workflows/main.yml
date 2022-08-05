@@ -15,7 +15,7 @@ jobs:
     runs-on: ubuntu-latest
     env:
       SHA_SHORT: ${GITHUB_SHA::7}
-      RUNNER_NUMBER: ${GITHUB_RUN_ID}
+      RUNNER_NUMBER: ${GITHUB_RUN_NUMBER}
       VERSION_MAJOR: "0.9."
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
