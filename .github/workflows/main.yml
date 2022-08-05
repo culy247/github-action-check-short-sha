@@ -27,5 +27,5 @@ jobs:
           prefix: ${GITHUB_REF_NAME}
           
       - name: Run show version
-        run: echo "${{ env.VERSION_MAJOR }}${{ env.RUNNER_NUMBER }}-${{ env.SHA_SHORT }}"
+        run: echo "${{ env.VERSION_MAJOR }}$BUILD_NUMBER-${{ env.SHA_SHORT }}"
        
