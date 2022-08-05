@@ -24,7 +24,7 @@ jobs:
       - uses: einaregilsson/build-number@v3
         with:
           token: ${{secrets.github_token}}
-          prefix: ${GITHUB_REF_NAME}
+          prefix: ${GITHUB_HEAD_REF}
           
       - name: Run show version
         run: echo "${{ env.VERSION_MAJOR }}$BUILD_NUMBER-${{ env.SHA_SHORT }}"
