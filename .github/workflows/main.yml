@@ -27,7 +27,7 @@ jobs:
         run: echo $VERSION_MAJOR$RUNNER_NUMBER-$SHA_SHORT
         env:
           SHA_SHORT: ${GITHUB_SHA::7}
-          RUNNER_NUMBER: ${GITHUB_RUN_NUMBER}
+          RUNNER_NUMBER: $GITHUB_RUN_NUMBER
           VERSION_MAJOR: 0.9.
         
       - run: echo "$GITHUB_CONTEXT"
