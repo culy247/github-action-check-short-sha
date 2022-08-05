@@ -15,7 +15,7 @@ jobs:
     runs-on: ubuntu-latest
     env:
       SHA_SHORT: ${GITHUB_SHA::7}
-      RUNNER_NUMBER: $GITHUB_RUN_NUMBER
+      RUNNER_NUMBER: ${GITHUB_RUN_NUMBER}
       VERSION_MAJOR: "0.9."
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
@@ -23,7 +23,7 @@ jobs:
       - uses: actions/checkout@v3
 
       - name: Run show version
-        run: echo "${{ VERSION_MAJOR }}${{ RUNNER_NUMBER }}-${{ SHA_SHORT }}"
+        run: echo "${{ env.VERSION_MAJOR }}${{ env.RUNNER_NUMBER }}-${{ env.SHA_SHORT }}"
        
         
-      - run: echo "${{ github }}"
+      - run: echo "${{ env }}"
