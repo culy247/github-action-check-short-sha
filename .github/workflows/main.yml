@@ -27,5 +27,3 @@ jobs:
       - name: Run show version
         run: echo "${{ env.VERSION_MAJOR }}$BUILD_NUMBER-${{ env.SHA_SHORT }}"
        
-        
-      - run: echo "${{ env }}"
