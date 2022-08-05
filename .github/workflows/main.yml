@@ -16,7 +16,7 @@ jobs:
     env:
       SHA_SHORT: ${GITHUB_SHA::7}
       RUNNER_NUMBER: $GITHUB_RUN_NUMBER
-      VERSION_MAJOR: 0.9.
+      VERSION_MAJOR: "0.9."
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
