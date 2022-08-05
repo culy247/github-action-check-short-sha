@@ -26,10 +26,7 @@ jobs:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v3
 
-      # Runs a single command using the runners shell
-      - name: Set sort sha
-        run: echo "::set-output name=sha_short::$(git rev-parse --short HEAD)"
-
-      # Runs a set of commands using the runners shell
-      - name: Run a multi-line script
+      - name: Run show version
         run: echo $VERSION_MAJOR$RUNNER_NUMBER-$SHA_SHORT
+        
+      - run: echo "$GITHUB_CONTEXT"
