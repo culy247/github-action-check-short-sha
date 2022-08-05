@@ -29,4 +29,4 @@ jobs:
 
       # Runs a set of commands using the runners shell
       - name: Run a multi-line script
-        run: echo "0.9.${{ github.run_number }}-${{steps.vars.outputs.sha_short}}"
+        run: echo "0.9.$GITHUB_RUN_NUMBER-${{steps.vars.outputs.sha_short}}"
